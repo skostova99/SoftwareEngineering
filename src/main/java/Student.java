@@ -18,7 +18,27 @@ public class Student {
         this.id = id;
     }
 
+    public String getName(){
+        return name;
+    }
+
     public String getUsername(){
-        return name + Integer.toString(age);
+        return username + Integer.toString(age);
+    }
+
+    public String getDob(){
+        return dob;
+    }
+
+//    public String getModules(){
+//        return;
+//    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public int getId(){
+        return id;
     }
 }
