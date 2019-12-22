@@ -5,13 +5,13 @@ public class Student {
     private String name;
     private String username;
     private String dob;
-    private ArrayList<Module> modules;
-    private CourseProgramme courseEnrolled;
+    private String courseEnrolled;
+    private String[] modules;
     private int age;
     private int id;
 
     // Setters
-    public Student(String name, String username, String dob, ArrayList<Module> modules, CourseProgramme courseEnrolled, int age, int id){
+    public Student(String name, String username, String dob, String[] modules, String courseEnrolled, int age, int id){
         this.name = name;
         this.username = username;
         this.dob = dob;
@@ -22,31 +22,35 @@ public class Student {
     }
 
     // Getters
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return username + Integer.toString(age);
     }
 
-    public String getDob(){
+    public String getDob() {
         return dob;
     }
 
-    public CourseProgramme getCourse(){
+    public String getCourse(){
         return courseEnrolled;
     }
 
-    public ArrayList<Module> getModules(){
-        return modules;
+    public String getModules() {
+        String str = "";
+        for (String s: this.modules) {
+            str += s + "";
+        }
+        return str;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 }
